@@ -1,0 +1,35 @@
+[33mcommit 37bee69124daa993957282bdcf46bdfc256d7d92[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Gabriel Camelo <gabriellcamello@hotmail.com>
+Date:   Mon Dec 3 11:50:58 2018 -0200
+
+    Criei e configurei as factories category, posts e tag. Criei e configurei as seeds categories, tags e posts. Alterei as models category, post e tag
+
+[33mcommit 01cc9941c6982b24a1589bd4eac809f51386668a[m
+Author: Gabriel Camelo <gabriellcamello@hotmail.com>
+Date:   Sun Dec 2 04:48:40 2018 -0200
+
+    Configurei as mirations
+
+[33mcommit e885304b53d9f6961e4f2f9a548b4f393ea0e12f[m
+Author: Gabriel Camelo <gabriellcamello@hotmail.com>
+Date:   Sun Dec 2 02:49:29 2018 -0200
+
+    Criei as models category, post e tag; Também criei as migrations category, post, tag e post_tag
+
+[33mcommit ee2a0cdde4fcc46395a638e5df6abf8d2f3efc5a[m
+Author: Gabriel Camelo <gabriellcamello@hotmail.com>
+Date:   Fri Nov 30 10:30:33 2018 -0200
+
+    Instalei e configurei o laravelcollective/html
+
+[33mcommit 9bc44d2baee812efc693a2dbfa3bdc1620239806[m
+Author: Gabriel Camelo <gabriellcamello@hotmail.com>
+Date:   Fri Nov 30 09:26:24 2018 -0200
+
+    Instalei e configurei o adminlte, configurei o banco de dados e configurie o painel do adminlte com o sistema de login do laravel
+
+[33mcommit fbc8ab774ada26be8e31ae4e2357e98c00f51f15[m
+Author: Gabriel Camelo <gabriellcamello@hotmail.com>
+Date:   Fri Nov 30 08:59:20 2018 -0200
+
+    Instalei o laravel 5.7

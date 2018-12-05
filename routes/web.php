@@ -11,10 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::redirect('/', 'home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'Web\HomeController@index')->name('home');
+
+Route::get('/post/{slug}', 'Web\HomeController@post')->name('post');
+Route::get('/category/{slug}', 'Web\HomeController@category')->name('category');
+Route::get('/tag/{slug}', 'Web\HomeController@tag')->name('tag');

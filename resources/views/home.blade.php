@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+{{-- @extends('adminlte::page')
 
 @section('title', 'AdminLTE')
 
@@ -8,4 +8,10 @@
 
 @section('content')
 
+@stop --}}
+
+@extends('layouts.app')
+
+@section('content')
+	werwer
 @stop
