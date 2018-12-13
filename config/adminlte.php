@@ -108,12 +108,59 @@ return [
     */
 
     'menu' => [
-        'MAIN NAVIGATION',
+        'Admin',
         [
-            'text' => 'Blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
+            'text'        => 'Post',
+            'url'         => 'posts',
+            'icon'        => 'file',
+            'submenu' => [
+                [
+                    'text' => 'Post',
+                    'url'  => 'posts',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'posts/create',
+                    'icon' => 'plus',
+                ],
+            ],
         ],
+        [
+            'text'        => 'Category',
+            'url'         => 'categories',
+            'icon'        => 'paste',
+            'submenu' => [
+                [
+                    'text' => 'Category',
+                    'url'  => 'categories',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'categories/create',
+                    'icon' => 'plus',
+                ],
+            ],
+        ],
+        [
+            'text'        => 'Tag',
+            'url'         => 'tags',
+            'icon'        => 'tags',
+            'submenu' => [
+                [
+                    'text' => 'Tag',
+                    'url'  => 'tags',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'tags/create',
+                    'icon' => 'plus',
+                ],
+            ],
+        ],
+        'MAIN NAVIGATION',
         [
             'text'        => 'Pages',
             'url'         => 'admin/pages',
@@ -126,49 +173,6 @@ return [
             'text' => 'Profile',
             'url'  => 'admin/settings',
             'icon' => 'user',
-        ],
-        [
-            'text' => 'Change Password',
-            'url'  => 'admin/settings',
-            'icon' => 'lock',
-        ],
-        [
-            'text'    => 'Multilevel',
-            'icon'    => 'share',
-            'submenu' => [
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-                [
-                    'text'    => 'Level One',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'Level Two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'Level Two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'Level Three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'Level One',
-                    'url'  => '#',
-                ],
-            ],
         ],
         'LABELS',
         [

@@ -112,6 +112,28 @@
                 @yield('content_header')
             </section>
 
+            <!-- Alerts -->
+            @if (session('info'))
+                <div class="col-md-12">
+                    <div class="alert alert-success">
+                        {{ session('info') }}
+                    </div>
+                </div>
+            @endif
+
+            @if(count($errors))            
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            @endif
+
+
             <!-- Main content -->
             <section class="content">
 
@@ -129,6 +151,8 @@
     </div>
     <!-- ./wrapper -->
 @stop
+
+@yield('scripts')
 
 @section('adminlte_js')
     <script src="{{ asset('vendor/adminlte/dist/js/adminlte.min.js') }}"></script>
