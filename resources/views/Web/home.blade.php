@@ -12,7 +12,7 @@
 		                    <img src="{{ $post->file }}" class="img-fluid"> 
 		                @endif
 		            </a>
-		            <a href="{{ route('post', $post->slug) }}" class="" >{{ $post->name }}</a>
+		            <a href="{{ route('post', $post->slug) }}" class="" >{{ $post->name }}</a>{{ \Carbon\Carbon::now() }}
 <a class="badge badge-pill badge-dark" href="{{ route('category', $post->category->slug) }}">
                 {{ $post->category->name }}
             </a>

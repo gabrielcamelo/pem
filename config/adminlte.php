@@ -160,6 +160,23 @@ return [
                 ],
             ],
         ],
+        [
+            'text'        => 'Files',
+            'url'         => 'file',
+            'icon'        => 'file',
+            'submenu' => [
+                [
+                    'text' => 'file',
+                    'url'  => 'files',
+                    'icon' => 'list',
+                ],
+                [
+                    'text' => 'Create',
+                    'url'  => 'files/create',
+                    'icon' => 'plus',
+                ],
+            ],
+        ],
         'MAIN NAVIGATION',
         [
             'text'        => 'Pages',

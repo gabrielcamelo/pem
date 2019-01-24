@@ -52,9 +52,10 @@
 
 @section('scripts')
 {{-- <script src="{{ asset('vendor/tinymce/js/tinymce/tinymce.min.js') }}"></script> --}}
+<script src="{{ asset('vendor/tinymce/tinymce.min.js') }}"></script>
 <script>
-{{--
-      var editor_config = {
+
+    var editor_config = {
     path_absolute : "{{ URL::to('/') }}/",
     selector: "textarea.my-editor",
     plugins: [
@@ -90,7 +91,7 @@
 tinymce.init(editor_config);
 
 
---}}
+
 
 
 

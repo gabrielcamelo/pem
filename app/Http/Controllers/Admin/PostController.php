@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\PostStoreRequest;
 use App\Http\Requests\PostUpdateRequest;
+use Illuminate\Support\Facades\Storage;
 
 use App\Post;
 use App\Category;
@@ -39,7 +40,7 @@ class PostController extends Controller
     public function store(PostStoreRequest $request)
     {
         $post = Post::create($request->all());
-        $this->authorize('pass', $post);
+        //$this->authorize('pass', $post);
 
         //IMAGE 
         if($request->file('image')){
@@ -56,7 +57,7 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
-        $this->authorize('pass', $post);
+        //$this->authorize('pass', $post);
 
         return view('admin.posts.show', compact('post'));
     }
@@ -75,7 +76,7 @@ class PostController extends Controller
     public function update(PostUpdateRequest $request, $id)
     {
         $post = Post::find($id);
-        $this->authorize('pass', $post);
+        //$this->authorize('pass', $post);
 
         $post->fill($request->all())->save();
 
