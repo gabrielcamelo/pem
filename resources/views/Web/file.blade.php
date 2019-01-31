@@ -4,8 +4,10 @@
 
 	<section class="">
 		<h1> Preencha o formulário para receber os arquivos </h1>
-        {!! Form::open(['route' => 'posts.store', 'files' => true]) !!}
-            
+        {!! Form::open(['route' => 'file.store']) !!}
+
+        	{{ Form::hidden('file', $file->image) }}
+			
 			<div class="form-group">
 				{{ Form::label('name', 'Nome') }}
 				{{ Form::text('name', null, ['class' => 'form-control']) }}
@@ -22,7 +24,7 @@
 			</div>
 
 			<div class="form-group">
-			    {{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}
+				{{ Form::submit('Guardar', ['class' => 'btn btn-sm btn-primary']) }}
 			</div>
 
         {!! Form::close() !!}

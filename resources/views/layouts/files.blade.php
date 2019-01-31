@@ -22,6 +22,29 @@
 </head>
 <body>
     <div id="app">
+
+            <!-- Alerts -->
+            @if (session('info'))
+                <div class="col-md-12">
+                    <div class="alert alert-success">
+                        {{ session('info') }}
+                    </div>
+                </div>
+            @endif
+
+            @if(count($errors))            
+                <div class="col-md-12">
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                </div>
+            @endif
+
+    
         <main class="py-4">
             @yield('content')
         </main>

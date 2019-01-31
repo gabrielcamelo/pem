@@ -25,7 +25,7 @@ class HomeController extends Controller
                         ->where('publish_in', '<', \Carbon\Carbon::now())
                         /*->whereTime('publish_in', '<', date('H:i:s', strtotime(now())))*/
                         ->paginate(4);
-        return view('Web.home', compact('posts'));
+        return view('Web.home2', compact('posts'));
     }
 
     public function category($slug){

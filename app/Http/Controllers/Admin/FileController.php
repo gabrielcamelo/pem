@@ -28,7 +28,7 @@ class FileController extends Controller
         return view('admin.files.create');
     }
 
-    public function store(FileUpdateRequest $request)
+    public function store(FileStoreRequest $request)
     {
         $file = File::create($request->all());
 
