@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\FilesStoreRequest;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Mail;
 
 use App\File;
 use App\Lids;
+use App\Mail\mailLeads;
 
 class FilesController extends Controller
 {
@@ -32,6 +34,7 @@ class FilesController extends Controller
     {
         $file = Lids::create($request->all());
         $image = $request->get('file');
+        Mail::to('lucas.sousa@programacaoematematica.com.br')->send(new mailLeads());
         return view('Web.msg', compact('image'))->with('info', 'E-mail enviado');
     }
 
