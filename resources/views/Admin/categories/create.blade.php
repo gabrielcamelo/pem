@@ -9,7 +9,7 @@
     <div class="bg-white p-3">
         {!! Form::open(['route' => 'categories.store']) !!}
             
-            @include('admin.categories.partials.form')
+            @include('Admin.categories.partials.form')
 
         {!! Form::close() !!}
     </div>

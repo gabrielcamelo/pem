@@ -8,7 +8,7 @@
     <div class="bg-white p-3">
         {!! Form::open(['route' => 'posts.store', 'files' => true]) !!}
             
-            @include('admin.posts.partials.form')
+            @include('Admin.posts.partials.form')
 
         {!! Form::close() !!}
     </div>

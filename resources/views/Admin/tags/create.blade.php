@@ -8,7 +8,7 @@
     <div class="bg-white p-3">
         {!! Form::open(['route' => 'tags.store']) !!}
             
-            @include('admin.tags.partials.form')
+            @include('Admin.tags.partials.form')
 
         {!! Form::close() !!}
     </div>
