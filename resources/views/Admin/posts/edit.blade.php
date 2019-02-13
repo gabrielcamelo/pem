@@ -9,7 +9,7 @@
     <div class="bg-white p-3">
         {!! Form::model($post, ['route' => ['posts.update', $post->id], 'method' => 'PUT', 'files' => true]) !!}
             
-             @include('admin.posts.partials.form') 
+             @include('Admin.posts.partials.form') 
 
         {!! Form::close() !!}
     </div>

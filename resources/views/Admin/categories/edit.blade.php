@@ -8,7 +8,7 @@
     <div class="bg-white p-3">
         {!! Form::model($category, ['route' => ['categories.update', $category->id], 'method' => 'PUT']) !!}
             
-            @include('admin.categories.partials.form')
+            @include('Admin.categories.partials.form')
 
         {!! Form::close() !!}
     </div>

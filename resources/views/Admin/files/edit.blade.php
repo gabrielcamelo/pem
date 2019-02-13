@@ -8,7 +8,7 @@
     <div class="bg-white p-3">
         {!! Form::model($file, ['route' => ['tags.update', $file->id], 'method' => 'PUT', 'files' => true]) !!}
             
-            @include('admin.tags.partials.form')
+            @include('Admin.tags.partials.form')
 
         {!! Form::close() !!}
     </div>
