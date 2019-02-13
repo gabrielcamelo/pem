@@ -34,7 +34,7 @@ class HomeController extends Controller
         $posts = Post::where('category_id', $category)
             ->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
 
-        return view('web.posts', compact('posts'));
+        return view('Web.posts', compact('posts'));
     }
 
     public function tag($slug){ 
@@ -43,7 +43,7 @@ class HomeController extends Controller
         })
         ->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(3);
 
-        return view('web.posts', compact('posts'));
+        return view('Web.posts', compact('posts'));
     }
 
     public function post($slug){
@@ -53,7 +53,7 @@ class HomeController extends Controller
         $relacionados = Post::where('category_id', $category)
             ->orderBy('id', 'DESC')->where('status', 'PUBLISHED')->paginate(6);
 
-    	return view('web.post', compact('post', 'relacionados'));
+    	return view('Web.post', compact('post', 'relacionados'));
     }
 
     

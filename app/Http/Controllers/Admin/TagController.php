@@ -19,12 +19,12 @@ class TagController extends Controller
     public function index()
     {
         $tags = Tag::orderBy('id', 'DESC')->paginate(7);
-        return view('admin.tags.index', compact('tags'));
+        return view('Admin.tags.index', compact('tags'));
     }
 
     public function create()
     {
-        return view('admin.tags.create');
+        return view('Admin.tags.create');
     }
 
     public function store(TagUpdateRequest $request)
@@ -36,13 +36,13 @@ class TagController extends Controller
     public function show($id)
     {
         $tag = Tag::find($id);
-        return view('admin.tags.show', compact('tag'));
+        return view('Admin.tags.show', compact('tag'));
     }
 
     public function edit($id)
     {
         $tag = Tag::find($id);
-        return view('admin.tags.edit', compact('tag'));
+        return view('Admin.tags.edit', compact('tag'));
     }
 
     public function update(TagUpdateRequest $request, $id)

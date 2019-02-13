@@ -19,37 +19,37 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::orderBy('id', 'DESC')->paginate(8);
-        return view('admin.categories.index', compact('categories'));
+        return view('Admin.categories.index', compact('categories'));
     }
 
     public function create()
     {
-        return view('admin.categories.create');
+        return view('Admin.categories.create');
     }
 
     public function store(CategoryStoreRequest $request)
     {
         $category = Category::create($request->all());
-        return redirect()->route('categories.edit', $category->id)->with('info', 'Categoria criada com sucesso');
+        return redirect()->route('Categories.edit', $category->id)->with('info', 'Categoria criada com sucesso');
     }
 
     public function show($id)
     {
         $category = Category::find($id);
-        return view('admin.categories.show', compact('category'));
+        return view('Admin.categories.show', compact('category'));
     }
 
     public function edit($id)
     {
         $category = Category::find($id);
-        return view('admin.categories.edit', compact('category'));
+        return view('Admin.categories.edit', compact('category'));
     }
 
     public function update(CategoryUpdateRequest $request, $id)
     {
         $category = Category::find($id);
         $category->fill($request->all())->save();
-        return redirect()->route('categories.edit', $category->id)->with('info', 'Categoria atualizada com sucesso');
+        return redirect()->route('Categories.edit', $category->id)->with('info', 'Categoria atualizada com sucesso');
     }
 
     public function destroy($id)

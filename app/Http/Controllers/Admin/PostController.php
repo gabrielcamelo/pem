@@ -27,14 +27,14 @@ class PostController extends Controller
         //$posts = Post::orderBy('id', 'DESC')->where('user_id', auth()->user()->id)
         //    ->paginate(7);
         $posts = Post::orderBy('id', 'DESC')->paginate(8);
-        return view('admin.posts.index', compact('posts'));
+        return view('Admin.posts.index', compact('posts'));
     }
 
     public function create()
     {
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
         $tags       = Tag::orderBy('name', 'ASC')->get();
-        return view('admin.posts.create', compact('categories', 'tags'));
+        return view('Admin.posts.create', compact('categories', 'tags'));
     }
 
     public function store(PostStoreRequest $request)
@@ -59,7 +59,7 @@ class PostController extends Controller
         $post = Post::find($id);
         //$this->authorize('pass', $post);
 
-        return view('admin.posts.show', compact('post'));
+        return view('Admin.posts.show', compact('post'));
     }
 
     public function edit($id)
@@ -70,7 +70,7 @@ class PostController extends Controller
         $categories = Category::orderBy('name', 'ASC')->pluck('name', 'id');
         $tags       = Tag::orderBy('name', 'ASC')->get();
 
-        return view('admin.posts.edit', compact('post', 'categories', 'tags'));
+        return view('Admin.posts.edit', compact('post', 'categories', 'tags'));
     }
 
     public function update(PostUpdateRequest $request, $id)

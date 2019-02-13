@@ -8,7 +8,7 @@ use App\Http\Requests\FileStoreRequest;
 use App\Http\Requests\FileUpdateRequest;
 use Illuminate\Support\Facades\Storage;
 
-use App\file;
+use App\File;
 
 class FileController extends Controller
 {
@@ -20,12 +20,12 @@ class FileController extends Controller
     public function index()
     {
         $files = File::orderBy('id', 'DESC')->paginate(7);
-        return view('admin.files.index', compact('files'));
+        return view('Admin.files.index', compact('files'));
     }
 
     public function create()
     {
-        return view('admin.files.create');
+        return view('Admin.files.create');
     }
 
     public function store(FileStoreRequest $request)
@@ -44,13 +44,13 @@ class FileController extends Controller
     public function show($id)
     {
         $file = File::find($id);
-        return view('admin.files.show', compact('file'));
+        return view('Admin.files.show', compact('file'));
     }
 
     public function edit($id)
     {
         $file = File::find($id);
-        return view('admin.files.edit', compact('file'));
+        return view('Admin.files.edit', compact('file'));
     }
 
     public function update(FileUpdateRequest $request, $id)
