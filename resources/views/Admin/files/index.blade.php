@@ -20,7 +20,7 @@
             <tr>
                 <td class="col-md-10">{{ $file->name }}</td>
                 <td class="col-md-1">
-                    <a href="{{ route('files.edit', $files->id) }}" class="btn btn-primary">Editar</a>
+                    <a href="{{ route('files.edit', $file->id) }}" class="btn btn-primary">Editar</a>
                 </td>
                 <td class="col-md-1">
                     {!! Form::open(['route' => ['files.destroy', $file->id], 'method' => 'DELETE']) !!}
