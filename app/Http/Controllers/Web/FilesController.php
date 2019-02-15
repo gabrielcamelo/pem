@@ -34,7 +34,7 @@ class FilesController extends Controller
     {
         $file = Lids::create($request->all());
         $image = $request->get('file');
-        Mail::to('lucas.sousa@programacaoematematica.com.br')->send(new mailLeads());
+        Mail::to('gabriellcamello@hotmail.com')->send(new mailLeads());
         return view('Web.msg', compact('image'))->with('info', 'E-mail enviado');
     }
 
