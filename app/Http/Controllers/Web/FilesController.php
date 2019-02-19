@@ -33,9 +33,22 @@ class FilesController extends Controller
     public function store(FilesStoreRequest $request)
     {
         $file = Lids::create($request->all());
-        $image = $request->get('file');
-        Mail::to('gabriellcamello@hotmail.com')->send(new mailLeads());
-        return view('Web.msg', compact('image'))->with('info', 'E-mail enviado');
+        $arquivo = $request->get('file');
+        $email = $request->get('email');
+        $nome = $request->get('name');
+        $link = $request->get('link');
+        // Dessa for é necessário a classe Mail gerada com o artisan do laravel
+        // Mail::to('gabriellcamello@hotmail.com')->send(new mailLeads()); 
+
+        Mail::send('Mail.mail', compact('arquivo', 'nome', 'link', 'nome'), function($message) use ($arquivo, $email, $nome, $link){
+            $message->to([$email]);
+            $message->subject('AssunTo do E-maIl');
+            // $message->attach($arquivo, ['as' => 'outroNome.zip']);
+            // $message->cc();
+            // $message->bcc();
+        });
+
+        return view('Web.msg', compact('arquivo', 'email'))->with('info', 'E-mail enviado');
     }
 
     public function show($id)

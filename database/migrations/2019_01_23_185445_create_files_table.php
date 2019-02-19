@@ -18,6 +18,7 @@ class CreateFilesTable extends Migration
             $table->string('name');
             $table->string('slug')->unique();
             $table->string('site');
+            $table->string('link');
             $table->string('image')->nullable();
             $table->timestamps();
         });

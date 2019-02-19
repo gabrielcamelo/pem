@@ -27,7 +27,7 @@ class FileUpdateRequest extends FormRequest
             'name'  =>  'required',
             'slug'  =>  'required|unique:files,slug,' . $this->file,
             'site' => 'required',
-            'image' => 'required',
+            'link' => 'required',
         ];
 
     }

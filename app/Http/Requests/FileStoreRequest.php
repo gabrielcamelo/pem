@@ -26,7 +26,7 @@ class FileStoreRequest extends FormRequest
         return [
             'name' => 'required',
             'site' => 'required',
-            'image' => 'required',
+            'link' => 'required',
         ];
 
     }

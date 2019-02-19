@@ -11,6 +11,10 @@
     {{ Form::text('site', null, ['class' => 'form-control']) }}
 </div>
 <div class="form-group">
+    {{ Form::label('link', 'Link') }}
+    {{ Form::text('link', null, ['class' => 'form-control']) }}
+</div>
+<div class="form-group">
     {{ Form::label('image', 'Imagem') }}
     {{ Form::file('image') }}
 </div>
