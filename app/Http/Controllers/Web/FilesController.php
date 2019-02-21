@@ -27,7 +27,7 @@ class FilesController extends Controller
 
     public function create()
     {
-        // return view('Web.file.index');
+        // # return view('Web.file.index');
     }
 
     public function store(FilesStoreRequest $request)
